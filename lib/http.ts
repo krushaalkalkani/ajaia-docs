@@ -31,6 +31,8 @@ export function route<Ctx>(handler: (req: Request, ctx: Ctx) => Promise<Response
     try {
       return await handler(req, ctx);
     } catch (err) {
+      // Let Next.js control-flow errors (dynamic usage bailout, redirect, notFound) through untouched.
+      if (typeof (err as { digest?: unknown })?.digest === "string") throw err;
       if (err instanceof HttpError) return errorResponse(err.status, err.message, err.code);
       if (err instanceof ZodError) {
         const first = err.issues[0];

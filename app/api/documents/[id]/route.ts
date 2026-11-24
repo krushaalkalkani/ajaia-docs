@@ -50,3 +50,6 @@ export const DELETE = route<Ctx>(async (_req, { params }) => {
   await prisma.document.delete({ where: { id: params.id } });
   return NextResponse.json({ ok: true });
 });
+
+// Per-user data: never pre-render or cache.
+export const dynamic = "force-dynamic";

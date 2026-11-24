@@ -26,3 +26,6 @@ export const POST = route(async (req) => {
   });
   return NextResponse.json({ document: serializeDocument(doc, "owner") }, { status: 201 });
 });
+
+// Per-user data: never pre-render or cache.
+export const dynamic = "force-dynamic";

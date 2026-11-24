@@ -19,3 +19,6 @@ export const GET = route<Ctx>(async (_req, { params }) => {
     },
   });
 });
+
+// Per-user data: never pre-render or cache.
+export const dynamic = "force-dynamic";

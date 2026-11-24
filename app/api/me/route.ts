@@ -7,3 +7,6 @@ export const GET = route(async () => {
   const user = await requireUser();
   return NextResponse.json({ user: publicUser(user) });
 });
+
+// Per-user data: never pre-render or cache.
+export const dynamic = "force-dynamic";

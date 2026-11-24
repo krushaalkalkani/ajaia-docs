@@ -44,3 +44,6 @@ export const POST = route<Ctx>(async (req, { params }) => {
   });
   return NextResponse.json({ share }, { status: 201 });
 });
+
+// Per-user data: never pre-render or cache.
+export const dynamic = "force-dynamic";
