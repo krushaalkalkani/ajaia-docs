@@ -38,3 +38,5 @@ next-env.d.ts
 # env (secrets)
 .env
 !.env.example
+.env*
+.claude/

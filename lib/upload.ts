@@ -4,11 +4,9 @@ import { marked } from "marked";
 import { htmlToTiptapJson } from "./tiptap/html-to-json";
 import { normalizeTitle } from "./validation";
 
-export const MAX_UPLOAD_BYTES = 2 * 1024 * 1024; // 2 MB
-export const SUPPORTED_EXTENSIONS = [".txt", ".md", ".markdown", ".docx"] as const;
-/** For <input accept> and user-facing copy. */
-export const UPLOAD_ACCEPT = SUPPORTED_EXTENSIONS.join(",");
-export const SUPPORTED_TYPES_LABEL = ".txt, .md, .docx (max 2 MB)";
+import { MAX_UPLOAD_BYTES, SUPPORTED_EXTENSIONS, SUPPORTED_TYPES_LABEL } from "./upload-constants";
+
+export { MAX_UPLOAD_BYTES, SUPPORTED_EXTENSIONS, SUPPORTED_TYPES_LABEL };
 
 export class UploadError extends Error {
   constructor(
