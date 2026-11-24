@@ -7,12 +7,12 @@
 | App | **Next.js 14 (App Router) + TypeScript** | One deployable for UI and API. Server components render the dashboard and editor shell with access already checked; route handlers serve the JSON API. |
 | Styling | **Tailwind CSS** | Fast to build a clean, consistent UI without a component library. |
 | Editor | **Tiptap 2** (StarterKit + Underline) | ProseMirror underneath: a real document schema, reliable formatting, undo history, keyboard shortcuts. Content is stored as **Tiptap JSON**, not HTML, so it round-trips exactly and is safe to render. |
-| Data | **Postgres + Prisma** (Neon via Vercel Marketplace) | Relational fits users ↔ documents ↔ shares naturally; `Json` column holds the document. Prisma gives typed queries and a one-command schema push. |
+| Data | **Postgres + Prisma** (Neon free tier) | Relational fits users ↔ documents ↔ shares naturally; `Json` column holds the document. Prisma gives typed queries and a one-command schema push. |
 | Validation | **zod** | Every API input is parsed by a schema; failures return a friendly 400. |
 | Upload parsing | **mammoth** (.docx), **marked** (.md), **linkedom** | Convert to HTML, then let ProseMirror's own parser map that HTML onto the editor schema (see below). |
 | Toasts | **sonner** | Small, accessible notifications. |
 | Tests | **Vitest** | Fast, zero-config TypeScript tests. |
-| Hosting | **Vercel** | Zero-config Next.js hosting; Neon provisioned from the Marketplace injects `DATABASE_URL`. |
+| Hosting | **Vercel** | Zero-config Next.js hosting, GitHub-connected so every push to `main` redeploys. Neon (us-east-1, same region as the functions) supplies `DATABASE_URL` (pooled) and `DATABASE_URL_UNPOOLED` (direct, for schema pushes). |
 
 ## Data model
 

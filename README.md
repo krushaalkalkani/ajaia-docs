@@ -4,8 +4,9 @@ A lightweight collaborative document editor inspired by Google Docs, built as a 
 
 Create rich-text documents, rename them inline, autosave as you type, upload `.txt` / `.md` / `.docx` files as new editable documents, and share documents with other users as **editors** or **viewers**.
 
-- **Live app:** __LIVE_URL__
+- **Live app:** https://ajaia-docs-coral-five.vercel.app
 - **Repository:** https://github.com/krushaalkalkani/ajaia-docs
+- **Hosting:** Vercel (auto-deploys from `main`) + Neon Postgres (free tier)
 
 ## Test accounts
 

@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Live app** | __LIVE_URL__ |
+| **Live app** | https://ajaia-docs-coral-five.vercel.app |
 | **Repository** | https://github.com/krushaalkalkani/ajaia-docs |
 | **Walkthrough video** | _See [VIDEO_URL.txt](VIDEO_URL.txt)_ |
 
@@ -23,7 +23,7 @@ Mocked auth — click a user on the sign-in page (no password).
 | Deliverable | Where |
 |-------------|-------|
 | Source code | This repository (Next.js 14 App Router, TypeScript, Tailwind, Tiptap, Prisma/Postgres) |
-| Deployed app | __LIVE_URL__ (Vercel + Neon Postgres) |
+| Deployed app | https://ajaia-docs-coral-five.vercel.app (Vercel + Neon Postgres) |
 | README (setup, accounts, tests, upload types) | [README.md](README.md) |
 | Architecture & trade-offs | [ARCHITECTURE.md](ARCHITECTURE.md) |
 | AI workflow notes + build log | [AI_WORKFLOW.md](AI_WORKFLOW.md) |
@@ -32,6 +32,9 @@ Mocked auth — click a user on the sign-in page (no password).
 | Walkthrough video | [VIDEO_URL.txt](VIDEO_URL.txt) (placeholder) |
 
 ## What works
+
+_Verified on the live URL on 2026-11-24: Alice creates → formats → shares with Bob; Bob sees it under “Shared with me” and can edit; Carol gets “Document not found” (API 404); upload and Markdown export work._
+
 
 - Mock sign-in as any seeded user; switch users from the header.
 - Dashboard with **My documents** and **Shared with me** (shared badge with role and owner name), new document, upload, delete.
